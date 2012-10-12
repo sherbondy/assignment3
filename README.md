@@ -11,4 +11,4 @@ it here as a static library. Otherwise, we'll have to play the waiting game.
 
 Enjoy.
 
-If you run into any issues/have questions, [email me](mailto:ethanis@mit.edu)
+If you run into any issues/have questions, [email me](mailto:ethanis@mit.edu).
