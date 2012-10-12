@@ -24,7 +24,7 @@ PROG      = a3
 all: $(SRCS) $(PROG)
 
 $(PROG): $(OBJS)
-	$(CC) $(CFLAGS) $(OBJS) -o $@ $(LINKFLAGS)
+	$(CC) $(CFLAGS) $(OBJS) -o $@ $(LINKFLAGS) $(FRAMEWORKS)
 
 .cpp.o:
 	$(CC) $(CFLAGS) $< -c -o $@ $(INCFLAGS)
