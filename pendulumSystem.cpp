@@ -1,4 +1,3 @@
-
 #include "pendulumSystem.h"
 
 PendulumSystem::PendulumSystem(int numParticles):ParticleSystem(numParticles)

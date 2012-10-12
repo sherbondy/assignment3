@@ -3,14 +3,21 @@
 #include <ctime>
 #include <iostream>
 #include <vector>
-
-#include <GL/glut.h>
 #include <vecmath.h>
+
+#ifdef __APPLE__
+# include <OpenGL/glu.h>
+# include <OpenGL/gl.h>
+# include <GLUT/glut.h>
+#else
+# include <GL/glu.h>
+#endif
+
 #include "camera.h"
 
 ///TODO: include more headers if necessary
 
-#include "TimeStepper.hpp"
+#include "TimeStepper.h"
 #include "simpleSystem.h"
 
 using namespace std;
@@ -29,7 +36,7 @@ namespace
     // seed the random number generator with the current time
     srand( time( NULL ) );
     system = new SimpleSystem();
-    timeStepper = new RK4();		
+    timeStepper = new ForwardEuler();		
   }
 
   // Take a step forward for the particle shower

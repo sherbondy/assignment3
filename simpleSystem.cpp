@@ -1,4 +1,3 @@
-
 #include "simpleSystem.h"
 
 using namespace std;

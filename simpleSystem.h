@@ -1,9 +1,14 @@
 #ifndef SIMPLESYSTEM_H
 #define SIMPLESYSTEM_H
 
-#include <GL/glut.h>
 #include <vecmath.h>
 #include <vector>
+
+#ifdef __APPLE__
+# include <GLUT/glut.h>
+#else
+# include <GL/glut.h>
+#endif
 
 #include "particleSystem.h"
 

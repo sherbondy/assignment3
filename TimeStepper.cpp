@@ -1,4 +1,4 @@
-#include "TimeStepper.hpp"
+#include "TimeStepper.h"
 
 ///TODO: implement Explicit Euler time integrator here
 void ForwardEuler::takeStep(ParticleSystem* particleSystem, float stepSize)

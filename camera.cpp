@@ -1,7 +1,12 @@
 #include "camera.h"
 
 #include <iostream>
-#include <GL/glu.h>
+
+#ifdef __APPLE__
+# include <OpenGL/glu.h>
+#else
+# include <GL/glu.h>
+#endif
 
 #ifndef M_PI
 #define M_PI 3.14159265358979f
