@@ -32,7 +32,7 @@ namespace
   void initSystem(int argc, char * argv[])
   {
     // seed the random number generator with the current time
-    srand( time( NULL ) );
+    srand( (unsigned)time( NULL ) );
     system = new SimpleSystem();
     timeStepper = new ForwardEuler();		
   }
