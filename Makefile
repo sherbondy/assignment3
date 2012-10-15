@@ -1,17 +1,14 @@
 UNAME := $(shell uname)
 
 INCFLAGS  = -I vecmath/include
+LINKFLAGS = -L vecmath/lib -lvecmath
 
 ifeq ($(UNAME),Darwin)
 FRAMEWORKS =  -framework Glut 
 FRAMEWORKS += -framework OpenGL 
-
-LINKFLAGS = -L vecmath/lib -lvecmath
-
 else
-INCFLAGS += -I /usr/include/GL
-
-LINKFLAGS = -L -lRK4 -lglut -lGL -lGLU
+INCFLAGS  += -I /usr/include/GL
+LINKFLAGS += -L -lRK4 -lglut -lGL -lGLU
 endif
 
 CFLAGS    = -g -Wall -ansi
